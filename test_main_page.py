@@ -59,3 +59,10 @@ def test_guest_can_go_to_login_page_from_product_page (browser):
     page = ProductPage(browser, link)
     page.open()
     page.go_to_login_page()
+
+@pytest.mark.basket
+def test_guest_cant_see_product_in_basket_opened_from_main_page(browser):
+    link = "http://selenium1py.pythonanywhere.com/en-gb/catalogue/coders-at-work_207/"
+    page = BasketPage(browser, link, 4)
+    page.open()
+    page.guest_cant_see_product_in_basket_opened_from_main_page()

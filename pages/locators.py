@@ -16,5 +16,11 @@ class BasketLocator():
 class BasePageLocators():
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
     LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link")
+
+class BasketTransition():
+    TRANSITION_TO_BASKET = (By.CSS_SELECTOR, "span .btn")
+    BASKET_EMPTY = (By.CSS_SELECTOR, "#id_form-0-quantity")
+    BASKET_EMPTY_TEXT = (By.CSS_SELECTOR, "#content_inner>p")
+
      
  
