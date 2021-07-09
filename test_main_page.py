@@ -17,7 +17,7 @@ def test_guest_can_go_to_login_page(browser):
     login.should_be_login_page()
 
 @pytest.mark.parametrize('different_links', ["0", "1", "2", "3", "4", "5", "6", pytest.param("7", marks=pytest.mark.xfail), "8", "9"])         
-def test_add_to_basket(browser, different_links):
+def test_guest_can_add_product_to_basket(browser, different_links):
     link = f"http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=offer{different_links}"
     page = BasketPage(browser, link)
     page.open()
